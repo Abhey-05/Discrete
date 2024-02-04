@@ -1,0 +1,220 @@
+
+\let\negmedspace\undefined
+\let\negthickspace\undefined
+\documentclass[journal,12pt,twocolumn]{IEEEtran}
+\usepackage{cite}
+\usepackage{amsmath,amssymb,amsfonts,amsthm}
+
+\usepackage{graphicx}
+\usepackage{textcomp}
+\usepackage{xcolor}
+\usepackage{txfonts}
+\usepackage{listings}
+\usepackage{enumitem}
+\usepackage{mathtools}
+\usepackage{gensymb}
+\usepackage[breaklinks=true]{hyperref}
+\usepackage{tkz-euclide} % loads  TikZ and tkz-base
+\usepackage{listings}
+\usepackage{gvv}
+\usepackage{booktabs}
+
+%
+%\usepackage{setspace}
+%\usepackage{gensymb}
+%\doublespacing
+%\singlespacing
+
+%\usepackage{graphicx}
+%\usepackage{amssymb}
+%\usepackage{relsize}
+%\usepackage[cmex10]{amsmath}
+%\usepackage{amsthm}
+%\interdisplaylinepenalty=2500
+%\savesymbol{iint}
+%\usepackage{txfonts}
+%\restoresymbol{TXF}{iint}
+%\usepackage{wasysym}
+%\usepackage{amsthm}
+%\usepackage{iithtlc}
+%\usepackage{mathrsfs}
+%\usepackage{txfonts}
+%\usepackage{stfloats}
+%\usepackage{bm}
+%\usepackage{cite}
+%\usepackage{cases}
+%\usepackage{subfig}
+%\usepackage{xtab}
+%\usepackage{longtable}
+%\usepackage{multirow}
+
+%\usepackage{algpseudocode}
+%\usepackage{enumitem}
+%\usepackage{mathtools}
+%\usepackage{tikz}
+%\usepackage{circuitikz}
+%\usepackage{verbatim}
+%\usepackage{tfrupee}
+%\usepackage{stmaryrd}
+%\usetkzobj{all}
+%    \usepackage{color}                                            %%
+%    \usepackage{array}                                            %%
+%    \usepackage{longtable}                                        %%
+%    \usepackage{calc}                                             %%
+%    \usepackage{multirow}                                         %%
+%    \usepackage{hhline}                                           %%
+%    \usepackage{ifthen}                                           %%
+  %optionally (for landscape tables embedded in another document): %%
+%    \usepackage{lscape}     
+%\usepackage{multicol}
+%\usepackage{chngcntr}
+%\usepackage{enumerate}
+
+%\usepackage{wasysym}
+%\documentclass[conference]{IEEEtran}
+%\IEEEoverridecommandlockouts
+% The preceding line is only needed to identify funding in the first footnote. If that is unneeded, please comment it out.
+
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{problem}{Problem}
+\newtheorem{proposition}{Proposition}[section]
+\newtheorem{lemma}{Lemma}[section]
+\newtheorem{corollary}[theorem]{Corollary}
+\newtheorem{example}{Example}[section]
+\newtheorem{definition}[problem]{Definition}
+%\newtheorem{thm}{Theorem}[section] 
+%\newtheorem{defn}[thm]{Definition}
+%\newtheorem{algorithm}{Algorithm}[section]
+%\newtheorem{cor}{Corollary}
+\newcommand{\BEQA}{\begin{eqnarray}}
+\newcommand{\EEQA}{\end{eqnarray}}
+\newcommand{\define}{\stackrel{\triangle}{=}}
+\theoremstyle{remark}
+\newtheorem{rem}{Remark}
+
+%\bibliographystyle{ieeetr}
+\begin{document}
+%
+
+\bibliographystyle{IEEEtran}
+
+
+\vspace{3cm}
+
+\title{
+%	\logo{
+Discrete Assignment 
+
+\large{EE:1205 Signals and Systems}
+
+Indian Institute of Technology, Hyderabad
+%	}
+}
+\author{Abhey Garg
+
+EE23BTECH11202
+}	
+
+
+% make the title area
+\maketitle
+
+\newpage
+
+%\tableofcontents
+
+\bigskip
+
+\renewcommand{\thefigure}{\arabic{figure}}
+\renewcommand{\thetable}{\arabic{table}}
+\renewcommand{\theequation}{\arabic{equation}}
+
+\section{Question GATE AG 14}
+$y=e^{mx}+e^{-mx}$ is the solution of which differential equation?
+\section{Solution}
+
+\begin{equation}
+y = e^{mx} + e^{-mx} \label{eq:eq1}
+\end{equation}
+The Laplace transform of $e^{mx(t)}$ is given by:
+
+\begin{align}
+\mathcal{L}\{e^{mx(t)}\} = \frac{1}{s - m}
+\end{align}  
+
+Similarly, the Laplace transform of $e^{-mx(t)}$ is:
+
+\begin{align}
+\mathcal{L}\{e^{-mx(t)}\} = \frac{1}{s + m}
+\end{align}
+  
+Now, applying the linearity property, the Laplace transform of $y(t)$ is the sum of the Laplace transforms of the individual terms:
+
+\begin{align}
+\mathcal{L}\{y(t)\} = \mathcal{L}\{e^{mx(t)}\} + \mathcal{L}\{e^{-mx(t)}\} 
+\end{align} 
+\begin{align}
+= \frac{1}{s - m} + \frac{1}{s + m} 
+\end{align}
+\begin{align}
+= \frac{2s}{s^2 - m^2} \quad -m < Re(s) < m
+\end{align}
+
+Taking the inverse laplace transform : 
+
+\begin{align}
+\frac{d^2y}{dx^2} - m^2y(t) = \mathcal{L}^{-1}\left(\frac{2s}{s^2 - m^2}\right)
+\end{align}
+
+To find the inverse Laplace transform of \(\frac{2s}{s^2 - m^2}\), let's express it in partial fraction form:
+
+\begin{equation}
+\frac{2s}{s^2 - m^2} = \frac{A}{s - m} + \frac{B}{s + m}
+\end{equation}
+
+Multiplying through by the common denominator:
+
+\begin{equation}
+2s = A(s + m) + B(s - m)
+\end{equation}
+
+Now, solving for A and B:
+
+\begin{equation}
+2s = As + Am + Bs - Bm
+\end{equation}
+
+Equating coefficients:
+
+\begin{equation}
+A + B = 2
+\end{equation}
+\begin{equation}
+A - B = 0
+\end{equation}
+
+Solving this system of equations gives \(A = B = 1\). Now, we can express the original fraction in partial fraction form:
+
+\begin{equation}
+\frac{2s}{s^2 - m^2} = \frac{1}{s - m} + \frac{1}{s + m}
+\end{equation}
+
+Now, the inverse Laplace transform of each term:
+
+\begin{equation}
+\mathcal{L}^{-1}\left\{\frac{2s}{s^2 - m^2}\right\} = \mathcal{L}^{-1}\left\{\frac{1}{s - m}\right\} + \mathcal{L}^{-1}\left\{\frac{1}{s + m}\right\}
+\end{equation}
+
+This yields the following differential equation:
+
+\begin{equation}
+\frac{d^{2}y}{dx^{2}} - m^2y(t) = \delta(t - m) + \delta(t + m)
+\end{equation}
+
+where \(\delta(t - m)\) and \(\delta(t + m)\) are Dirac delta functions.
+
+\begin{equation}
+    \frac{d^{2}y}{dx^{2}} - m^2y = 0
+\end{equation}
+
+\end{document}
