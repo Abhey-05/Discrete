@@ -134,7 +134,7 @@ Show that the ratio of the sum of the first \(n\) terms of a geometric progressi
 \section{Solution}
 \input{tables/table1}
 \begin{equation}
-x(n) = x(0) \cdot r^n \cdot u(n)
+x(n) = x(0) r^n u(n)
 \end{equation}
 
 where
@@ -152,10 +152,10 @@ s(n) &= x(n)*u(n)
 \end{align}
 Taking z transform
 \begin{align}
-S(z) = X(z)*U(z)
+S(z) = X(z)U(z)
 \end{align}
 \begin{align}
-= \left(\frac{x(0)}{1 - rz^{-1}}\right) \cdot \left(\frac{1}{1 - z^{-1}}\right)  \quad |z| > |r| \cap |z| > |1| 
+= \left(\frac{x(0)}{1 - rz^{-1}}\right) \left(\frac{1}{1 - z^{-1}}\right)  \quad |z| > |r| \cap |z| > |1| 
 \end{align}
 \begin{align}
 = \frac{x(0)}{(1 - rz^{-1})(1 - z^{-1})} && \quad |z| > |r|
@@ -164,7 +164,7 @@ which can be expressed as
 \begin{align}
 S(z) = \frac{x(0)}{r-1} \left(\frac{r}{1-rz^{-1}} - \frac{1}{1-z^{-1}}\right)
 \end{align}
-using partial fractions , Again the inverse of the above can be expressed as 
+Using partial fractions, Again the inverse of the above can be expressed as 
 \begin{align}
 s(n) = x(0)\left(\frac{r^{n}-1}{r-1}\right)u(n)
 \end{align}
