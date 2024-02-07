@@ -137,24 +137,18 @@ How many 3 digit numbers are divisible by 7?
 
 Three digit numbers which are divisible by 7 are \(105, 112, 119, \ldots, 994\), which form an arithmetic progression (A.P). 
 The number of terms in the AP x\brak{n} is given by: 
-\begin{align}  \label{eq:eq1}
-    n = \frac{x\brak{n} - x\brak{0}}{d}  + 1
-\end{align}
-\begin{equation}
-    x(n) = x(0) + nd
-\end{equation}
-\begin{equation}
-    X(z) = \frac{x[0]}{1 - z^{-1}} + d\frac{z^{-1}}{(1 - z^{-1})^2} \quad |z| > 1  \label{eq:eq2}
-\end{equation}
+
 \begin{align}
-x\brak{n} &= \brak{105 + \brak{n}7}u\brak{n}
-\label{eq:eq3}
+x\brak{n} &= \brak{105 + 7n}u\brak{n} \label{eq:eq1}
+\end{align}
+\begin{align}
+k = \frac{x(k-1)-x(0)}{d} + 1
 \end{align}
 Using the values in \tabref{tab:table0} :
 \begin{align}
     k = \frac{994 - 105}{7} + 1 = 128
 \end{align}
-Taking z transform of \eqref{eq:eq3} :
+Taking z transform of \eqref{eq:eq1} using  \ref{eq:apz} :
 \begin{align}
  X\brak{z} = \frac{105 - 98z^{-1}}{\brak{1-z^{-1}}^2} \quad |z| > 1 
 \end{align}
