@@ -134,7 +134,20 @@ How many 3 digit numbers are divisible by 7?
 
 \input{tables/table1}
 
-
+We can use modular arithmetic to determine last three digit number divisible by 7 . 
+\begin{align}
+x(k-1) \equiv 0  \; (mod\; 7)
+\end{align}
+So we need to find the largest multiple of 7 less than 1000. We can find this by subtracting the remainder when 1000 is divided by 7 from 1000.
+\begin{align}
+1000 - (1000\; mod \;7)
+\end{align} 
+\begin{align}
+= 1000 - 6
+\end{align}
+\begin{align}
+x(k-1) = 994
+\end{align}
 Three digit numbers which are divisible by 7 are \(105, 112, 119, \ldots, 994\), which form an arithmetic progression (A.P). 
 The number of terms in the AP x\brak{n} is given by: 
 
