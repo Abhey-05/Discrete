@@ -141,36 +141,56 @@ At \( z = \pi \), which of the following options is (are) correct?
 \end{enumerate}
 \hfill (GATE PH 2023)
 \section{Solution}
-The order of the pole is determined by the highest power of $(z-\pi)$ in the denominator.
-In this case, the highest power is 4, so the order of the pole is 4.
-\newline
-\newline
-Now, let's find the residue. The residue $a_{-1}$ is the coefficient of $(z-\pi)^{-1}$ in the Laurent series.\\
-To find $a_{-1}$, we can rewrite the function as:
+\input{tables/table1}
+
 \begin{align}
-f(z) &= \frac{z^2 \sin z}{(z-\pi)^4} = \frac{g(z)}{(z-\pi)^3} \\
-\end{align}
-where $g(z) = z^2 \sin z$.
-\newline
-\newline
-Now, we can use the formula for the n-th coefficient in the Laurent series:
-\begin{align}
-a_n &= \frac{1}{2\pi i} \oint_C \frac{f(z)}{(z-c)^{n+1}} \,dz.
-\end{align}
-For n = -1, this becomes:
-\begin{align}
-a_{-1} &= \frac{1}{2\pi i} \oint_C \frac{g(z)}{(z-\pi)^3} \,dz.
+lim_{{z \to \pi}} (z-\pi)^3 f(z) 
 \end{align}
 \begin{align}
-a_{-1} &= \frac{1}{2\pi i} \oint_C \frac{z^2 \sin z}{(z-\pi)^3} \,dz.
-\end{align}
-This is a standard residue calculation, and the result will be the coefficient of $(z-\pi)^{-1}$, \\
-which is the residue at $z=\pi$.
-\begin{align}
-a_{-1} &= \frac{2\pi}{2!} \left(\frac{d^2}{dz^2} \sin z\right)_{z=\pi}.
+= \lim_{{z \to \pi}} (z-\pi)^3 \left( \frac{{ z^2 \sin z}}{{(z-\pi)^4}} \right)
 \end{align}
 \begin{align}
-a_{-1} &= \frac{\pi}{3}.
+= \lim_{{z \to \pi}}  \left( \frac{{ z^2 \sin z}}{{(z-\pi)}} \right)
 \end{align}
+\begin{align}
+= \lim_{{z \to \pi}}  \left( \frac{2z sinz - z^2 cosz}{1} \right)
+\end{align}
+Which is a finite value , so order of pole is 3.
+\begin{equation}
+\text{Res}(f, \pi) = \frac{1}{(m-1)!} \frac{d^{m}}{dz^{m}} \left[ (z-\pi)^m f(z) \right] \Bigg|_{z=\pi}
+\end{equation}
+
+\begin{equation}
+\text{Res}(f,\pi) = \frac{1}{2!} \frac{d}{dz} \left[ (z-\pi)^3 \frac{z^2 \sin z}{(z-\pi)^4} \right] \Bigg|_{z=\pi}
+\end{equation}
+
+Simplify the expression:
+
+\begin{equation}
+\text{Res}(f,\pi) = \frac{1}{2!} \frac{d}{dz} \left[ \frac{z^2 \sin z}{(z-\pi)} \right] \Bigg|_{z=\pi}
+\end{equation}
+
+Compute the derivative:
+
+\begin{equation}
+\text{Res}(f,\pi) = \frac{1}{2!} \frac{d}{dz} \left[ z^2 \sin z \right] \Bigg|_{z=\pi}
+\end{equation}
+
+\begin{equation}
+\text{Res}(f,\pi) = \frac{1}{2!} \left( 2z \sin z + 2z^2 \cos z \right) \Bigg|_{z=\pi}
+\end{equation}
+
+Now, substitute \( z=\pi \):
+
+\begin{equation}
+\text{Res}(f,\pi) = \frac{1}{2!} \left( 2\pi \sin(\pi) + 2\pi^2 \cos(\pi) \right)
+\end{equation}
+
+Since \( \sin(\pi) = 0 \) and \( \cos(\pi) = -1 \), this simplifies to:
+
+\begin{equation}
+\text{Res}(f,\pi) = \frac{1}{2!} (-2\pi^2) = -\pi^2
+\end{equation}
+
 
 \end{document}
