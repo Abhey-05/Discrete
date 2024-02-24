@@ -142,7 +142,7 @@ At \( z = \pi \), which of the following options is (are) correct?
 \hfill (GATE PH 2023)
 \section{Solution}
 \input{tables/table1}
-
+To calculate m :
 \begin{align}
 lim_{{z \to \pi}} (z-\pi)^3 f(z) 
 \end{align}
@@ -152,30 +152,22 @@ lim_{{z \to \pi}} (z-\pi)^3 f(z)
 \begin{align}
 = \lim_{{z \to \pi}}  \left( \frac{{ z^2 \sin z}}{{(z-\pi)}} \right)
 \end{align}
-\begin{align}
-= \lim_{{z \to \pi}}  \left( \frac{2z sinz - z^2 cosz}{1} \right)
-\end{align}
+\begin{equation}
+= \lim_{{z \to \pi}}  \left( \frac{2z \sin(z) - z^2 \cos(z)}{1} \right)
+\end{equation}
 Which is a finite value , so order of pole is 3.
 \begin{equation}
 \text{Res}(f, \pi) = \frac{1}{(m-1)!} \frac{d^{m}}{dz^{m}} \left[ (z-\pi)^m f(z) \right] \Bigg|_{z=\pi}
 \end{equation}
-
 \begin{equation}
 \text{Res}(f,\pi) = \frac{1}{2!} \frac{d}{dz} \left[ (z-\pi)^3 \frac{z^2 \sin z}{(z-\pi)^4} \right] \Bigg|_{z=\pi}
 \end{equation}
-
-Simplify the expression:
-
 \begin{equation}
 \text{Res}(f,\pi) = \frac{1}{2!} \frac{d}{dz} \left[ \frac{z^2 \sin z}{(z-\pi)} \right] \Bigg|_{z=\pi}
 \end{equation}
-
-Compute the derivative:
-
 \begin{equation}
 \text{Res}(f,\pi) = \frac{1}{2!} \frac{d}{dz} \left[ z^2 \sin z \right] \Bigg|_{z=\pi}
 \end{equation}
-
 \begin{equation}
 \text{Res}(f,\pi) = \frac{1}{2!} \left( 2z \sin z + 2z^2 \cos z \right) \Bigg|_{z=\pi}
 \end{equation}
