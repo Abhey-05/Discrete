@@ -155,33 +155,25 @@ lim_{{z \to \pi}} (z-\pi)^3 f(z)
 \begin{equation}
 = \lim_{{z \to \pi}}  \left( \frac{2z \sin(z) - z^2 \cos(z)}{1} \right)
 \end{equation}
-Which is a finite value , so order of pole is 3.
+Which is a finite value , so \\
+m = 3
 \begin{equation}
-\text{Res}(f, \pi) = \frac{1}{(m-1)!} \frac{d^{m}}{dz^{m}} \left[ (z-\pi)^m f(z) \right] \Bigg|_{z=\pi}
+\text{Res}(f, \pi) = \frac{1}{(m-1)!} \frac{d^{m-1}}{dz^{m-1}} \left[ (z-\pi)^m f(z) \right] \Bigg|_{z=\pi}
 \end{equation}
 \begin{equation}
-\text{Res}(f,\pi) = \frac{1}{2!} \frac{d}{dz} \left[ (z-\pi)^3 \frac{z^2 \sin z}{(z-\pi)^4} \right] \Bigg|_{z=\pi}
+\text{Res}(f,\pi) = \frac{1}{2!} \frac{d^2}{dz^2} \left[ (z-\pi)^3 \frac{z^2 \sin z}{(z-\pi)^4} \right] \Bigg|_{z=\pi}
 \end{equation}
 \begin{equation}
-\text{Res}(f,\pi) = \frac{1}{2!} \frac{d}{dz} \left[ \frac{z^2 \sin z}{(z-\pi)} \right] \Bigg|_{z=\pi}
+\text{Res}(f,\pi) = \frac{1}{2!} \frac{d^2}{dz^2} \left[ \frac{z^2 \sin z}{(z-\pi)} \right] \Bigg|_{z=\pi}
 \end{equation}
 \begin{equation}
-\text{Res}(f,\pi) = \frac{1}{2!} \frac{d}{dz} \left[ z^2 \sin z \right] \Bigg|_{z=\pi}
+= \frac{1}{2!}\left(-\frac{z^2 - 2z(z-\pi)}{(z-\pi)^2}\right) \cos(z)+\left(\frac{z^2-2}{z-\pi}- \frac{2z^2}{(z-\pi)^3} - \frac{4z}{(z-\pi)^2}  \right) \sin(z)
 \end{equation}
-\begin{equation}
-\text{Res}(f,\pi) = \frac{1}{2!} \left( 2z \sin z + 2z^2 \cos z \right) \Bigg|_{z=\pi}
-\end{equation}
-
-Now, substitute \( z=\pi \):
-
-\begin{equation}
-\text{Res}(f,\pi) = \frac{1}{2!} \left( 2\pi \sin(\pi) + 2\pi^2 \cos(\pi) \right)
-\end{equation}
-
+Applying L'Hopital rule
 Since \( \sin(\pi) = 0 \) and \( \cos(\pi) = -1 \), this simplifies to:
 
 \begin{equation}
-\text{Res}(f,\pi) = \frac{1}{2!} (-2\pi^2) = -\pi^2
+\text{Res}(f,\pi) = \frac{1}{2!} \frac{\pi^2-6}{3} = \frac{\pi^2 - 6}{6} 
 \end{equation}
 
 
