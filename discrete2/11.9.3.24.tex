@@ -171,26 +171,17 @@ s(n) = x(0)\left(\frac{r^{n}-1}{r-1}\right)u(n)
 \begin{align}
 S(z) = \frac{x(0)}{r-1}\left(\frac{r}{1-rz^{-1}} - \frac{1}{1-z^{-1}}\right) 
 \end{align}
+To find S(2z) using the time-shifting property,  
 \begin{align}
-S(z) = \frac{r-1}{r}x(0)\left(1 - \frac{rz^{-1}}{r} - \frac{1}{1-z^{-1}}\right) 
-\end{align}
-To find S(2z) using the time-shifting property, set k=1 in 
-\begin{align}
-X_k(z)=z^{-k}X(z)
+S(n) \stackrel{\text{z}}{\xleftrightarrow{}} S(z)
 \end{align}
 \begin{align}
-S(2z) = z^{-1}S(z)
+S(2n) \stackrel{\text{z}}{\xleftrightarrow{}} S(z^2)
 \end{align}
-Now, substitute z with 2z in the expression for S(z): 
+Now, substitute z with $z^2$ in the expression for S(z):
 \begin{align}
-S(2z) = \frac{r-1}{r}x(0)\left(1 - \frac{2z}{r} - \frac{1}{1-2z^{-1}}\right)
-\end{align}
-\begin{align}
-S(2z) = \frac{r-1}{r}x(0)\left(1 - \frac{2z}{r} - \frac{1}{2z^{-1}-1}\right) 
-\end{align}
-\begin{align}
-S(2z) = \frac{r-1}{r}x(0)\left(2z - r - \frac{2z-1}{2z-r}\right) 
-\end{align}
+S(z^2) = \frac{x(0)}{r-1}\left(\frac{r}{1-rz^{-2}} - \frac{1}{1-z^{-2}}\right) 
+\end{align} 
 Now, to find S(2n) , take the inverse z transform. The expression is:
 \begin{align}
 s(2n) = x(0)\left(\frac{r^{2n-1}-1}{r-1}\right)u(2n)
