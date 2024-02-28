@@ -1,4 +1,3 @@
-
 \let\negmedspace\undefined
 \let\negthickspace\undefined
 \documentclass[journal,12pt,onecolumn]{IEEEtran}
@@ -163,13 +162,13 @@ Residue of function at z = $\pi$ is the coefficient of $\frac{1}{z-\pi}$
 z &= t + \pi
 \end{align}
 \begin{align}
-f(t+\pi) &= \frac{(t+\pi)^2 sin(t+\pi)}{t^4}
+f(t+\pi) &= \frac{(t+\pi)^2 \sin(t+\pi)}{t^4}
 \end{align}
 Residue is the coefficient of $\frac{1}{t}$
 \begin{align}
 &= \frac{(t^2 + 2t\pi + \pi^2)(-1)(t - \frac{t^3}{6} + ...)}{t^4} \\
-&= \frac{-t^3 + \frac{\pi^2t^3}{6} + \text{terms with coefficient } t^n\text{ where } n \neq 3}{t^4}
+&= \frac{-t^3 + \frac{\pi^2t^3}{6} + O(t^2)}{t^4}
 \end{align}
-so coeffient of 1/t is $ \frac{\pi^2}{6}-1$
+So coefficient of $\frac{1}{t}$ is $ \frac{\pi^2}{6}-1$
 \end{enumerate}
 \end{document}
