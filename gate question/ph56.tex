@@ -141,38 +141,35 @@ At \( z = \pi \), which of the following options is (are) correct?
 \hfill (GATE PH 2023)
 \section{Solution}
 \input{tables/table1}
-
+\begin{enumerate}[label=\textbf{\arabic*.}, font=\bfseries, align=left]
+\item[(a)]
+m = minimum k such that  $\lim_{{z \to \pi}} (z-\pi)^3 f(z)$ is finite
 \begin{align}
-\text{m = minimum k such that }  lim_{{z \to \pi}} (z-\pi)^3 f(z)\text{ is finite}
+&= \lim_{{z \to \pi}} (z-\pi)^3 \left( \frac{{ z^2 \sin z}}{{(z-\pi)^4}} \right)
 \end{align}
 \begin{align}
-= \lim_{{z \to \pi}} (z-\pi)^3 \left( \frac{{ z^2 \sin z}}{{(z-\pi)^4}} \right)
+&= \lim_{{z \to \pi}}  \left( \frac{{ z^2 \sin z}}{{(z-\pi)}} \right)
 \end{align}
 \begin{align}
-= \lim_{{z \to \pi}}  \left( \frac{{ z^2 \sin z}}{{(z-\pi)}} \right)
+&= \lim_{{z \to \pi}}  \left( \frac{2z \sin(z) - z^2 \cos(z)}{1} \right)
 \end{align}
-\begin{equation}
-= \lim_{{z \to \pi}}  \left( \frac{2z \sin(z) - z^2 \cos(z)}{1} \right)
-\end{equation}
-Which is a finite value , so $m = 3$
-\begin{equation}
-\text{Res}(f, \pi) = \frac{1}{(m-1)!} \frac{d^{m-1}}{dz^{m-1}} \left[ (z-\pi)^m f(z) \right] \Bigg|_{z=\pi}
-\end{equation}
-\begin{equation}
-\text{Res}(f,\pi) = \frac{1}{2!} \frac{d^2}{dz^2} \left[ (z-\pi)^3 \frac{z^2 \sin z}{(z-\pi)^4} \right] \Bigg|_{z=\pi}
-\end{equation}
-\begin{equation}
-\text{Res}(f,\pi) = \frac{1}{2!} \frac{d^2}{dz^2} \left[ \frac{z^2 \sin z}{(z-\pi)} \right] \Bigg|_{z=\pi}
-\end{equation}
-\begin{equation}
-= \frac{1}{2!}\left(-\frac{z^2 - 2z(z-\pi)}{(z-\pi)^2}\right) \cos(z)+\left(\frac{z^2-2}{z-\pi}- \frac{2z^2}{(z-\pi)^3} - \frac{4z}{(z-\pi)^2}  \right) \sin(z)
-\end{equation}
-Applying L'Hopital rule
-Since \( \sin(\pi) = 0 \) and \( \cos(\pi) = -1 \), this simplifies to:
-
-\begin{equation}
-\text{Res}(f,\pi) = \frac{1}{2!} \frac{\pi^2-6}{3} = \frac{\pi^2 - 6}{6} 
-\end{equation}
-
-
+Which is a finite value , so $m = 3$ \\
+\item[(b)]
+Residue of function at z = $\pi$ is the coefficient of $\frac{1}{z-\pi}$
+\begin{align}
+\text{let } z - \pi &= t
+\end{align}
+\begin{align}
+z &= t + \pi
+\end{align}
+\begin{align}
+f(t+\pi) &= \frac{(t+\pi)^2 sin(t+\pi)}{t^4}
+\end{align}
+Residue is the coefficient of $\frac{1}{t}$
+\begin{align}
+&= \frac{(t^2 + 2t\pi + \pi^2)(-1)(t - \frac{t^3}{6} + ...)}{t^4} \\
+&= \frac{-t^3 + \frac{\pi^2t^3}{6} + \text{terms with coefficient } t^n\text{ where } n \neq 3}{t^4}
+\end{align}
+so coeffient of 1/t is $ \frac{\pi^2}{6}-1$
+\end{enumerate}
 \end{document}
