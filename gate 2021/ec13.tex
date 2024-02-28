@@ -1,0 +1,182 @@
+
+\let\negmedspace\undefined
+\let\negthickspace\undefined
+\documentclass[journal,12pt,onecolumn]{IEEEtran}
+\usepackage{cite}
+\usepackage{amsmath,amssymb,amsfonts,amsthm}
+
+\usepackage{graphicx}
+\usepackage{textcomp}
+\usepackage{xcolor}
+\usepackage{txfonts}
+\usepackage{listings}
+\usepackage{enumitem}
+\usepackage{mathtools}
+\usepackage{gensymb}
+\usepackage[breaklinks=true]{hyperref}
+\usepackage{tkz-euclide} % loads  TikZ and tkz-base
+\usepackage{listings}
+\usepackage{gvv}
+\usepackage{booktabs}
+
+%
+%\usepackage{setspace}
+%\usepackage{gensymb}
+%\doublespacing
+%\singlespacing
+
+%\usepackage{graphicx}
+%\usepackage{amssymb}
+%\usepackage{relsize}
+%\usepackage[cmex10]{amsmath}
+%\usepackage{amsthm}
+%\interdisplaylinepenalty=2500
+%\savesymbol{iint}
+%\usepackage{txfonts}
+%\restoresymbol{TXF}{iint}
+%\usepackage{wasysym}
+%\usepackage{amsthm}
+%\usepackage{iithtlc}
+%\usepackage{mathrsfs}
+%\usepackage{txfonts}
+%\usepackage{stfloats}
+%\usepackage{bm}
+%\usepackage{cite}
+%\usepackage{cases}
+%\usepackage{subfig}
+%\usepackage{xtab}
+%\usepackage{longtable}
+%\usepackage{multirow}
+
+%\usepackage{algpseudocode}
+%\usepackage{enumitem}
+%\usepackage{mathtools}
+%\usepackage{tikz}
+%\usepackage{circuitikz}
+%\usepackage{verbatim}
+%\usepackage{tfrupee}
+%\usepackage{stmaryrd}
+%\usetkzobj{all}
+%    \usepackage{color}                                            %%
+%    \usepackage{array}                                            %%
+%    \usepackage{longtable}                                        %%
+%    \usepackage{calc}                                             %%
+%    \usepackage{multirow}                                         %%
+%    \usepackage{hhline}                                           %%
+%    \usepackage{ifthen}                                           %%
+  %optionally (for landscape tables embedded in another document): %%
+%    \usepackage{lscape}     
+%\usepackage{multicol}
+%\usepackage{chngcntr}
+%\usepackage{enumerate}
+
+%\usepackage{wasysym}
+%\documentclass[conference]{IEEEtran}
+%\IEEEoverridecommandlockouts
+% The preceding line is only needed to identify funding in the first footnote. If that is unneeded, please comment it out.
+
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{problem}{Problem}
+\newtheorem{proposition}{Proposition}[section]
+\newtheorem{lemma}{Lemma}[section]
+\newtheorem{corollary}[theorem]{Corollary}
+\newtheorem{example}{Example}[section]
+\newtheorem{definition}[problem]{Definition}
+%\newtheorem{thm}{Theorem}[section] 
+%\newtheorem{defn}[thm]{Definition}
+%\newtheorem{algorithm}{Algorithm}[section]
+%\newtheorem{cor}{Corollary}
+\newcommand{\BEQA}{\begin{eqnarray}}
+\newcommand{\EEQA}{\end{eqnarray}}
+\newcommand{\define}{\stackrel{\triangle}{=}}
+\theoremstyle{remark}
+\newtheorem{rem}{Remark}
+
+%\bibliographystyle{ieeetr}
+\begin{document}
+%
+
+\bibliographystyle{IEEEtran}
+
+
+\vspace{3cm}
+
+\title{
+%	\logo{
+Gate 2021 Assignment 
+
+\large{EE:1205 Signals and Systems}
+
+Indian Institute of Technology, Hyderabad
+%	}
+}
+\author{Abhey Garg
+
+EE23BTECH11202
+}	
+
+
+% make the title area
+\maketitle
+
+
+
+%\tableofcontents
+
+
+\renewcommand{\thefigure}{\theenumi}
+\renewcommand{\thetable}{\theenumi}
+%\renewcommand{\theequation}{\theenumi}
+
+\section{Question EC 13}
+Two continuous random variables X and Y are related as $Y = 2X+3$ . Let $\sigma_x^2 $ and $\sigma_y^2 $ denote the variances of X and Y , respectively. The variances are related as :
+\begin{enumerate}
+\item[(A)] $\sigma_y^2 $ = 2$\sigma_x^2$
+\item[(B)] $\sigma_y^2 $ = 4$\sigma_x^2$
+\item[(C)] $\sigma_y^2 $ = 5$\sigma_x^2$
+\item[(D)] $\sigma_y^2 $ = 25$\sigma_x^2$
+\end{enumerate}
+\section{Solution}
+\begin{align}
+Y = 2X+3
+\end{align}
+Take the laplace transform:
+\begin{align}
+\mathcal{L}\{Y\} = \mathcal{L}\{2X + 3\} = 2\mathcal{L}\{X\} + 3\mathcal{L}\{1\}\\
+\mathcal{L}\{Y\} = 2\mathcal{L}\{X\} + 3 \frac{1}{s}
+\end{align}
+
+Now, the variance of a random variable $A$ is given by:
+\begin{align}
+\text{Var}(A) = \mathcal{L}\{E[A^2]\} - [\mathcal{L}\{E[A]\}]^2
+\end{align}
+Let $A = X$ and $B = Y$. We want to find $\text{Var}(Y)$.
+\begin{align}
+\text{Var}(Y) = \mathcal{L}\{E[Y^2]\} - [\mathcal{L}\{E[Y]\}]^2
+\end{align}
+Since $Y = 2X + 3$, we can express $E[Y]$ and $E[Y^2]$ in terms of $X$.
+\begin{align}
+E[Y] = 2E[X] + 3 \\
+E[Y^2] = 4E[X^2] + 12E[X] + 9 
+\end{align}
+Substitute these into the variance formula:
+\begin{align}
+\text{Var}(Y) = \mathcal{L}\{4E[X^2] + 12E[X] + 9\} - [\mathcal{L}\{2E[X] + 3\}]^2
+\end{align}
+Let $\mathcal{L}\{E[X]\} = \mu_x$ (the mean of $X$) and $\mathcal{L}\{E[X^2]\} = \mu_{x^2}$ (the mean of $X^2$).
+\begin{align}
+\text{Var}(Y) = 4\mu_{x^2} + 12\mu_x + 9 - [2\mu_x + 3]^2 \\
+\text{Var}(Y) = 4\mu_{x^2} - 4\mu_x^2 
+\end{align}
+Now, remember that $\text{Var}(X) = \mu_{x^2} - \mu_x^2$, so we can substitute this in:
+\begin{align}
+\text{Var}(Y) = 4(\text{Var}(X)) 
+\end{align}
+Finally, substitute back :
+\begin{align}
+\sigma_y^2  = 4\sigma_x^2
+\end{align}
+
+
+
+\end{document}
