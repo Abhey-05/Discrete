@@ -1,0 +1,159 @@
+
+\let\negmedspace\undefined
+\let\negthickspace\undefined
+\documentclass[journal,12pt,onecolumn]{IEEEtran}
+\usepackage{cite}
+\usepackage{amsmath,amssymb,amsfonts,amsthm}
+
+\usepackage{graphicx}
+\usepackage{textcomp}
+\usepackage{xcolor}
+\usepackage{txfonts}
+\usepackage{listings}
+\usepackage{enumitem}
+\usepackage{mathtools}
+\usepackage{gensymb}
+\usepackage[breaklinks=true]{hyperref}
+\usepackage{tkz-euclide} % loads  TikZ and tkz-base
+\usepackage{listings}
+\usepackage{gvv}
+\usepackage{booktabs}
+
+%
+%\usepackage{setspace}
+%\usepackage{gensymb}
+%\doublespacing
+%\singlespacing
+
+%\usepackage{graphicx}
+%\usepackage{amssymb}
+%\usepackage{relsize}
+%\usepackage[cmex10]{amsmath}
+%\usepackage{amsthm}
+%\interdisplaylinepenalty=2500
+%\savesymbol{iint}
+%\usepackage{txfonts}
+%\restoresymbol{TXF}{iint}
+%\usepackage{wasysym}
+%\usepackage{amsthm}
+%\usepackage{iithtlc}
+%\usepackage{mathrsfs}
+%\usepackage{txfonts}
+%\usepackage{stfloats}
+%\usepackage{bm}
+%\usepackage{cite}
+%\usepackage{cases}
+%\usepackage{subfig}
+%\usepackage{xtab}
+%\usepackage{longtable}
+%\usepackage{multirow}
+
+%\usepackage{algpseudocode}
+%\usepackage{enumitem}
+%\usepackage{mathtools}
+%\usepackage{tikz}
+%\usepackage{circuitikz}
+%\usepackage{verbatim}
+%\usepackage{tfrupee}
+%\usepackage{stmaryrd}
+%\usetkzobj{all}
+%    \usepackage{color}                                            %%
+%    \usepackage{array}                                            %%
+%    \usepackage{longtable}                                        %%
+%    \usepackage{calc}                                             %%
+%    \usepackage{multirow}                                         %%
+%    \usepackage{hhline}                                           %%
+%    \usepackage{ifthen}                                           %%
+  %optionally (for landscape tables embedded in another document): %%
+%    \usepackage{lscape}     
+%\usepackage{multicol}
+%\usepackage{chngcntr}
+%\usepackage{enumerate}
+
+%\usepackage{wasysym}
+%\documentclass[conference]{IEEEtran}
+%\IEEEoverridecommandlockouts
+% The preceding line is only needed to identify funding in the first footnote. If that is unneeded, please comment it out.
+
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{problem}{Problem}
+\newtheorem{proposition}{Proposition}[section]
+\newtheorem{lemma}{Lemma}[section]
+\newtheorem{corollary}[theorem]{Corollary}
+\newtheorem{example}{Example}[section]
+\newtheorem{definition}[problem]{Definition}
+%\newtheorem{thm}{Theorem}[section] 
+%\newtheorem{defn}[thm]{Definition}
+%\newtheorem{algorithm}{Algorithm}[section]
+%\newtheorem{cor}{Corollary}
+\newcommand{\BEQA}{\begin{eqnarray}}
+\newcommand{\EEQA}{\end{eqnarray}}
+\newcommand{\define}{\stackrel{\triangle}{=}}
+\theoremstyle{remark}
+\newtheorem{rem}{Remark}
+
+%\bibliographystyle{ieeetr}
+\begin{document}
+%
+
+\bibliographystyle{IEEEtran}
+
+
+\vspace{3cm}
+
+\title{
+%	\logo{
+Gate 2021 Assignment 
+
+\large{EE:1205 Signals and Systems}
+
+Indian Institute of Technology, Hyderabad
+%	}
+}
+\author{Abhey Garg
+
+EE23BTECH11202
+}	
+
+
+% make the title area
+\maketitle
+
+
+
+%\tableofcontents
+
+
+\renewcommand{\thefigure}{\theenumi}
+\renewcommand{\thetable}{\theenumi}
+%\renewcommand{\theequation}{\theenumi}
+
+\section{Question EC 34}
+A digital transmission system uses a (7,4) systematic linear Hamming code for transmitting data over a noisy channel. If three of the message–codeword pairs in this code $(m_i ; c_i)$ where $c_i$ is the codeword corresponding to the $i^th$ message $m_i$ , are known to be (1100;0101100), (1110;0022220) and (0110 ; 1000110), then which of the following is a valid codeword in this code?
+\begin{enumerate}
+\item[A]0110100 
+\item[B]1011010
+\item[C] 0001011 
+\item[D]1101001
+\end{enumerate}
+\section{Solution}
+Given code is systematic linear hamming code of order (7, 4) \\ 
+\\
+Given message and code word pairs are \\
+1100; 0101100\\
+1110; 0011110\\
+0110; 1000110\\ 
+\\
+The code word is of the form\\
+c = p1 p2 p3 m1 m2 m3 m4 \\
+where
+\begin{align}
+P1 = d1 \oplus d2 \oplus d4\\
+P2 = d2 \oplus d3 \oplus d4\\
+P3 = d1 \oplus d2 \oplus d3\\
+\end{align}
+The code word which satisfies this pattern is 0001011
+
+
+
+\end{document}
