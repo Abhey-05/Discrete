@@ -129,53 +129,19 @@ EE23BTECH11202
 %\renewcommand{\theequation}{\theenumi}
 
 \section{Question EC 13}
-Two continuous random variables X and Y are related as $Y = 2X+3$ . Let $\sigma_x^2 $ and $\sigma_y^2 $ denote the variances of X and Y , respectively. The variances are related as :
-\begin{enumerate}
-\item[(A)] $\sigma_y^2 $ = 2$\sigma_x^2$
-\item[(B)] $\sigma_y^2 $ = 4$\sigma_x^2$
-\item[(C)] $\sigma_y^2 $ = 5$\sigma_x^2$
-\item[(D)] $\sigma_y^2 $ = 25$\sigma_x^2$
-\end{enumerate}
+The block diagram of a feedback control system is shown in the figure .
+\begin{center}
+\includegraphics[width=0.5\textwidth]{figs/figure1.png}
+\end{center}
+The transfer function $\frac{Y(s)}{X(s)}$ of the system is :
 \section{Solution}
+\input{tables/table1}
+According to Mason's gain formula , transfer function can be given as :
 \begin{align}
-Y = 2X+3
-\end{align}
-Take the laplace transform:
-\begin{align}
-\mathcal{L}\{Y\} = \mathcal{L}\{2X + 3\} = 2\mathcal{L}\{X\} + 3\mathcal{L}\{1\}\\
-\mathcal{L}\{Y\} = 2\mathcal{L}\{X\} + 3 \frac{1}{s}
+\text{TF } &= \frac{\sum_{k-1}^{n} P_k \Delta_k}{\Delta} = \frac{P_1\Delta_1 + P_2\Delta_2}{\Delta} \\
+&= \frac{G_1 + G_2 }{1 + G_1 H}
 \end{align}
 
-Now, the variance of a random variable $A$ is given by:
-\begin{align}
-\text{Var}(A) = \mathcal{L}\{E[A^2]\} - [\mathcal{L}\{E[A]\}]^2
-\end{align}
-Let $A = X$ and $B = Y$. We want to find $\text{Var}(Y)$.
-\begin{align}
-\text{Var}(Y) = \mathcal{L}\{E[Y^2]\} - [\mathcal{L}\{E[Y]\}]^2
-\end{align}
-Since $Y = 2X + 3$, we can express $E[Y]$ and $E[Y^2]$ in terms of $X$.
-\begin{align}
-E[Y] = 2E[X] + 3 \\
-E[Y^2] = 4E[X^2] + 12E[X] + 9 
-\end{align}
-Substitute these into the variance formula:
-\begin{align}
-\text{Var}(Y) = \mathcal{L}\{4E[X^2] + 12E[X] + 9\} - [\mathcal{L}\{2E[X] + 3\}]^2
-\end{align}
-Let $\mathcal{L}\{E[X]\} = \mu_x$ (the mean of $X$) and $\mathcal{L}\{E[X^2]\} = \mu_{x^2}$ (the mean of $X^2$).
-\begin{align}
-\text{Var}(Y) = 4\mu_{x^2} + 12\mu_x + 9 - [2\mu_x + 3]^2 \\
-\text{Var}(Y) = 4\mu_{x^2} - 4\mu_x^2 
-\end{align}
-Now, remember that $\text{Var}(X) = \mu_{x^2} - \mu_x^2$, so we can substitute this in:
-\begin{align}
-\text{Var}(Y) = 4(\text{Var}(X)) 
-\end{align}
-Finally, substitute back :
-\begin{align}
-\sigma_y^2  = 4\sigma_x^2
-\end{align}
 
 
 
