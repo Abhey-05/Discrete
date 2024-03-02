@@ -142,15 +142,15 @@ x_n = 0.5 x_{n-1} + 1
 \end{align}
 Taking Z-transform:
 \begin{align}
-X(z) = 0.5 z^-1 X(z) + \frac{1}{1-z^-1} \\
-X(z)[1-0.5z^-1] = \frac{1}{1-z^-1} \\
-X(z) = \frac{1}{(1-z^-1)(1-0.5z^-1)}\\
-X(z) = \frac{A}{1-z^-1} + \frac{B}{1-0.5z^-1}\\
+X(z) = 0.5 z^{-1} X(z) + \frac{1}{1-z^{-1}} \\
+X(z)[1-0.5z^{-1}] = \frac{1}{1-z^{-1}} \\
+X(z) = \frac{1}{(1-z^{-1})(1-0.5z^{-1})}\\
+X(z) = \frac{A}{1-z^{-1}} + \frac{B}{1-0.5z^{-1}}\\
 A+B = 1 \\
 A = -2B \\
 A = 2 \\
 B = -1 \\
-X(z) = \frac{2}{1-z^-1} + \frac{-1}{1-0.5z^-1}\\
+X(z) = \frac{2}{1-z^{-1}} + \frac{-1}{1-0.5z^{-1}}\\
 \end{align}
 Taking inverse Z-transform:
 \begin{align}
